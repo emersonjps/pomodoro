@@ -26,8 +26,9 @@ function Pomodoro(props: Props) {
   const [fullWorkingTime, setFullWorkingTime] = useState(0);
   const [numberOfPomodoros, setNumberOfPomodoros] = useState(0);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const startWorking = new Audio(mp3Working);
-    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const startTimer = new Audio(mp3Paused);
 
   useInterval(()=>{
