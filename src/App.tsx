@@ -6,9 +6,9 @@ function App() {
     <>
       <div className='container'>
         <Pomodoro 
-          pomodoroTime={3660} 
+          pomodoroTime={1500} 
           shortRestTime={300} 
-          longRestTime={900}
+          longRestTime={600}
           cycles={4}
         />
       </div>
