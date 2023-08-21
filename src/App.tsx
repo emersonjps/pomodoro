@@ -6,8 +6,8 @@ function App() {
     <>
       <div className='container'>
         <Pomodoro 
-          pomodoroTime={1500} 
-          shortRestTime={300} 
+          pomodoroTime={1500}
+          shortRestTime={300}
           longRestTime={600}
           cycles={4}
         />

@@ -5,6 +5,7 @@ import Button from './Button';
 import Timer from './Timer';
 import mp3Paused from './sounds/pauseTime.mp3';
 import mp3Working from './sounds/working.mp3';
+import mp3Alert from './sounds/alarm-clock-short-6402.mp3';
 
 interface Props {
   pomodoroTime: number;
@@ -30,10 +31,13 @@ function Pomodoro(props: Props) {
   const startWorking = new Audio(mp3Working);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const startTimer = new Audio(mp3Paused);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const alertTimer = new Audio(mp3Alert);
 
   useInterval(()=>{
     setMainTime(mainTime - 1);
     if (working) setFullWorkingTime(fullWorkingTime + 1);
+    if (mainTime === 8) alertTimer.play();
   }, timeCounting ? 1000 : null);
 
   const configureWork = useCallback(() => {
