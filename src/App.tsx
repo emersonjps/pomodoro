@@ -1,4 +1,5 @@
 import './App.css'
+import List from './components/List';
 import Pomodoro from './components/Pomodoro'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
           longRestTime={600}
           cycles={4}
         />
+        <List/>
       </div>
     </>
   )
